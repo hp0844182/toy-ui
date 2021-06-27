@@ -4,7 +4,10 @@
   "description": "toy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "lint": "eslint './src/*.{js,ts,tsx}' ",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -17,12 +20,44 @@
     "url": "https://github.com/hp0844182/toy-ui/issues"
   },
   "homepage": "https://github.com/hp0844182/toy-ui#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@storybook/addon-actions": "^6.3.0",
+    "@storybook/addon-essentials": "^6.3.0",
+    "@storybook/addon-links": "^6.3.0",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.3.0",
+    "@storybook/manager-webpack5": "^6.3.0",
+    "@storybook/react": "^6.3.0",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "autoprefixer": "^10.2.6",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.29.0",
+    "eslint-plugin-react": "^7.24.0",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "tailwindcss": "^2.2.4",
     "ts-loader": "^9.2.2",
-    "typescipt": "^1.0.0",
-    "webpack": "^5.38.1"
+    "typescript": "^4.3.4",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "prettier": "^2.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
