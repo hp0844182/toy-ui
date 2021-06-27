@@ -22,13 +22,8 @@
   "homepage": "https://github.com/hp0844182/toy-ui#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "eslint --fix"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
