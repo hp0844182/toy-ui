@@ -26,7 +26,11 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": ["prettier --write", "eslint --cache --fix", "git add"]
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
