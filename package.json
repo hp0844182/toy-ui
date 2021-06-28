@@ -7,8 +7,7 @@
     "build": "webpack",
     "lint": "eslint './src/*.{js,ts,tsx}' ",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "prepare": "husky install"
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -22,8 +21,9 @@
   },
   "homepage": "https://github.com/hp0844182/toy-ui#readme",
   "devDependencies": {
-    "commitizen": "^4.2.4",
     "@babel/core": "^7.14.6",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@storybook/addon-actions": "^6.3.0",
     "@storybook/addon-essentials": "^6.3.0",
     "@storybook/addon-links": "^6.3.0",
@@ -33,8 +33,10 @@
     "@storybook/react": "^6.3.0",
     "@types/react": "^17.0.11",
     "@types/react-dom": "^17.0.8",
+    "@types/tailwindcss": "^2.2.0",
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
+    "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.29.0",
     "eslint-plugin-react": "^7.24.0",
@@ -57,7 +59,7 @@
     "react-dom": "^17.0.2"
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": "eslint --cache --fix"
+    "/src/*.{js,ts,tsx}": "eslint --cache --fix"
   },
   "config": {
     "commitizen": {
