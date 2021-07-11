@@ -5,11 +5,8 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import { Button, ButtonProps } from '../components/button'
 
 export default {
-  title: 'Example/Button',
+  title: 'Components/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta
 const SuccessIcon: React.FC<any> = (props) => (
   <svg
