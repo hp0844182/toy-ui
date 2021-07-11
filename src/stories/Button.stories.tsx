@@ -1,40 +1,41 @@
-import React from 'react';
+import React from 'react'
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Button , ButtonProps } from '../button';
+import { Button, ButtonProps } from '../components/button'
 
 export default {
-    title: 'Example/Button',
-    component: Button,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as Meta;
+  title: 'Example/Button',
+  component: Button,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
+} as Meta
+const SuccessIcon: React.FC<any> = (props) => (
+  <svg
+    {...props}
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+  </svg>
+)
+const Template: Story<ButtonProps> = (args) => (
+  <Button
+    {...args}
+    icon={SuccessIcon}
+    onClick={() => {
+      console.log(123)
+    }}
+  />
+)
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
-
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
 Primary.args = {
-    layout:'primary',
-    children:'button'
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  layout:'primary',
-  children:'button'
-};
-
-export const Large = Template.bind({});
-Large.args = {
-    size: 'large',
-    children:'button'
-};
-
-export const Small = Template.bind({});
-Small.args = {
-    size: 'small',
-    children:'button'
-};
-
+  layout: 'primary',
+  children: 'button',
+}
