@@ -16,7 +16,7 @@ export interface InputProps extends React.ComponentPropsWithRef<'input'> {
   /**
    * Defines the type of the input
    */
-  type?: 'radio' | ''
+  type?: 'radio' | 'checkbox' | string
 }
 
 export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(props, ref) {
