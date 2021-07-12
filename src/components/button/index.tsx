@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React, { ReactNode, SVGAttributes, useContext } from 'react'
 import { ThemeContext } from '../../context/theme-context'
-import warn from '../../utils/warning'
+import warn from 'src/utils/warning'
 import { defaultButtonClasses } from './default'
 type IconType =
   | string
