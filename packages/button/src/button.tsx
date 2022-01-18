@@ -1,11 +1,11 @@
 // import { Spinner } from '@vechaiui/spinner'
 import { DefaultProps } from '@hpui/theme'
-import { cx, __DEV__ } from '@vechaiui/utils'
+import { cx, __DEV__ } from '@hpui/utils'
 import * as React from 'react'
 
 import { useButtonClass } from './styles'
 
-interface IButtonProps extends DefaultProps {
+export interface IButtonProps extends DefaultProps, React.HTMLAttributes<HTMLButtonElement> {
   /* Shows loading spinner */
   loading?: boolean
   /* Makes button disabled */
@@ -23,16 +23,14 @@ interface IButtonProps extends DefaultProps {
   /* Size of the button */
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   /* Color of the button */
-  colorType?: 'primary' | 'danger'
+  color?: 'primary' | 'danger' | 'secondary' | 'success' | 'danger' | 'warn' | 'link'
   /** Controls button appearance */
   variant?: 'primary' | 'link' | 'solid' | 'outline' | 'light' | 'ghost'
   /* React node */
   children?: React.ReactNode
 }
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>, IButtonProps {}
-
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
+export const Button = React.forwardRef<HTMLButtonElement, IButtonProps>((props, ref) => {
   const {
     disabled: _disabled,
     loading,
@@ -43,7 +41,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, r
     rightIcon,
     children,
     className,
-    colorType = 'primary',
+    color = 'primary',
     variant,
     size = 'md',
     ...rest
@@ -54,7 +52,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, r
     variant,
     size,
     disabled,
-    colorType,
+    color,
   })
 
   return (

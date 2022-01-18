@@ -1,32 +1,6 @@
 const withOpacity = require('./with-opacity')
-
+const colors = require('tailwindcss/colors')
 module.exports = {
-  primary: {
-    50: withOpacity('--vc-colors-primary-50'),
-    100: withOpacity('--vc-colors-primary-100'),
-    200: withOpacity('--vc-colors-primary-200'),
-    300: withOpacity('--vc-colors-primary-300'),
-    400: withOpacity('--vc-colors-primary-400'),
-    500: withOpacity('--vc-colors-primary-500'),
-    600: withOpacity('--vc-colors-primary-600'),
-    700: withOpacity('--vc-colors-primary-700'),
-    800: withOpacity('--vc-colors-primary-800'),
-    900: withOpacity('--vc-colors-primary-900'),
-  },
-
-  neutral: {
-    50: withOpacity('--vc-colors-neutral-50'),
-    100: withOpacity('--vc-colors-neutral-100'),
-    200: withOpacity('--vc-colors-neutral-200'),
-    300: withOpacity('--vc-colors-neutral-300'),
-    400: withOpacity('--vc-colors-neutral-400'),
-    500: withOpacity('--vc-colors-neutral-500'),
-    600: withOpacity('--vc-colors-neutral-600'),
-    700: withOpacity('--vc-colors-neutral-700'),
-    800: withOpacity('--vc-colors-neutral-800'),
-    900: withOpacity('--vc-colors-neutral-900'),
-  },
-
   whiteAlpha: {
     50: 'rgba(255, 255, 255, 0.04)',
     100: 'rgba(255, 255, 255, 0.06)',
@@ -39,7 +13,6 @@ module.exports = {
     800: 'rgba(255, 255, 255, 0.80)',
     900: 'rgba(255, 255, 255, 0.92)',
   },
-
   blackAlpha: {
     50: 'rgba(0, 0, 0, 0.04)',
     100: 'rgba(0, 0, 0, 0.06)',

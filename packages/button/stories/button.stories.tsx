@@ -11,139 +11,102 @@ export default {
 
 export const colors = () => (
   <div className="flex space-x-2">
-    <Button color="primary">Button</Button>
+    <Button color="primary">primary</Button>
+    <Button color="secondary">secondary</Button>
+    <Button color="success">success</Button>
+    <Button color="danger">danger</Button>
+    <Button color="warn">warn</Button>
+    <Button color="link">link</Button>
+  </div>
+)
+
+export const lightColors = () => (
+  <div className="flex space-x-2">
     <Button color="primary" variant="light">
-      Button
+      primary
+    </Button>
+    <Button color="secondary" variant="light">
+      secondary
+    </Button>
+    <Button color="success" variant="light">
+      success
+    </Button>
+    <Button color="danger" variant="light">
+      danger
+    </Button>
+    <Button color="warn" variant="light">
+      warn
+    </Button>
+    <Button color="link" variant="light">
+      warn
     </Button>
   </div>
 )
 
-export const solid = () => (
-  <div className="flex space-x-2">
-    <Button variant="solid">Button</Button>
-    <Button variant="solid" color="primary">
-      Button
+export const outline = () => (
+  <div className="flex space-x-2 items-center">
+    <Button color="primary" variant="outline">
+      primary
     </Button>
-    <Button variant="solid" color="orange">
-      Button
+    <Button color="secondary" variant="outline">
+      secondary
     </Button>
-    {/* <Button variant="solid" leftIcon={<Announcement className="w-5 h-5 mr-1 text-sm" />}>
-      Button
+    <Button color="success" variant="outline">
+      success
     </Button>
-    <Button variant="solid" color="primary" leftIcon={<Announcement className="w-5 h-5 mr-1 text-sm" />}>
-      Button
+    <Button color="danger" variant="outline">
+      danger
     </Button>
-    <Button variant="solid" rightIcon={<Announcement className="w-5 h-5 ml-1 text-sm" />}>
-      Button
+    <Button color="warn" variant="outline">
+      warn
     </Button>
-    <Button variant="solid" color="primary" rightIcon={<Announcement className="w-5 h-5 ml-1 text-sm" />}>
-      Button
-    </Button> */}
-    <Button variant="solid" loading>
-      Button
-    </Button>
-    <Button variant="solid" color="primary" loading loadingText="Loading...">
-      Button
-    </Button>
-  </div>
-)
-
-export const ghost = () => (
-  <div className="flex space-x-2">
-    <Button variant="ghost">Button</Button>
-    <Button variant="ghost" color="primary">
-      Button
-    </Button>
-    <Button variant="ghost" color="orange">
-      Button
-    </Button>
-    {/* <Button variant="ghost" leftIcon={<Announcement className="w-5 h-5 mr-1 text-sm" />}>
-      Button
-    </Button>
-    <Button variant="ghost" color="primary" leftIcon={<Announcement className="w-5 h-5 mr-1 text-sm" />}>
-      Button
-    </Button>
-    <Button variant="ghost" rightIcon={<Announcement className="w-5 h-5 ml-1 text-sm" />}>
-      Button
-    </Button>
-    <Button variant="ghost" color="primary" rightIcon={<Announcement className="w-5 h-5 ml-1 text-sm" />}>
-      Button
-    </Button> */}
-    <Button variant="ghost" loading>
-      Button
-    </Button>
-    <Button variant="ghost" color="primary" loading loadingText="Loading...">
-      Button
-    </Button>
-  </div>
-)
-
-export const light = () => (
-  <div className="flex space-x-2">
-    <Button variant="light">Button</Button>
-    <Button variant="light" color="primary">
-      Button
-    </Button>
-    <Button variant="light" color="orange">
-      Button
-    </Button>
-    {/* <Button variant="light" leftIcon={<Announcement className="w-5 h-5 mr-1 text-sm" />}>
-      Button
-    </Button>
-    <Button variant="light" color="primary" leftIcon={<Announcement className="w-5 h-5 mr-1 text-sm" />}>
-      Button
-    </Button>
-    <Button variant="light" rightIcon={<Announcement className="w-5 h-5 ml-1 text-sm" />}>
-      Button
-    </Button>
-    <Button variant="light" color="primary" rightIcon={<Announcement className="w-5 h-5 ml-1 text-sm" />}>
-      Button
-    </Button> */}
-    <Button variant="light" loading>
-      Button
-    </Button>
-    <Button variant="light" color="primary" loading loadingText="Loading...">
-      Button
-    </Button>
-  </div>
-)
-
-export const link = () => (
-  <div className="flex space-x-2">
-    <Button variant="link" color="primary">
-      Button
-    </Button>
-    <Button variant="link" color="orange">
-      Button
-    </Button>
-    {/* <Button variant="link" color="primary" leftIcon={<Announcement className="w-5 h-5 mr-1 text-sm" />}>
-      Button
-    </Button>
-    <Button variant="link" rightIcon={<Announcement className="w-5 h-5 ml-1 text-sm" />}>
-      Button
-    </Button> */}
-    <Button variant="link" color="primary" loading loadingText="Loading...">
-      Button
+    <Button color="link" variant="outline">
+      warn
     </Button>
   </div>
 )
 
 export const size = () => (
-  <div className="flex space-x-2">
-    <Button size="xs" variant="solid" color="primary">
+  <div className="flex space-x-2 items-center">
+    <Button size="xs" color="primary">
       Button
     </Button>
-    <Button size="sm" variant="solid" color="primary">
+    <Button size="sm" color="primary">
       Button
     </Button>
-    <Button size="md" variant="solid" color="primary">
+    <Button size="md" color="primary">
       Button
     </Button>
-    <Button size="lg" variant="solid" color="primary">
+    <Button size="lg" color="primary">
       Button
     </Button>
-    <Button size="xl" variant="solid" color="primary">
+    <Button size="xl" color="primary">
       Button
     </Button>
   </div>
 )
+
+export const disabled = () => {
+  return (
+    <div className="flex space-x-2 items-center">
+      <Button color="primary" disabled>
+        primary
+      </Button>
+      <Button color="danger" disabled>
+        danger
+      </Button>
+      <Button color="link" disabled>
+        link
+      </Button>
+      <Button color="secondary" disabled>
+        secondary
+      </Button>
+      <Button color="success" disabled>
+        success
+      </Button>
+      <Button color="warn" disabled>
+        warn
+      </Button>
+    </div>
+  )
+}

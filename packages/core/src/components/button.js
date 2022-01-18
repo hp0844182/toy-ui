@@ -1,192 +1,111 @@
-function buttonPrimary(colors) {
+function buttonPrimary() {
   return {
     '&-primary': {
       '@apply bg-primary hover:bg-primary-700': {},
       '@apply text-white': {},
     },
-    '&-primary+&-light': {
+    /* light variant */
+    '&-primary.btn-light': {
       '@apply bg-primary-200 hover:bg-primary': {},
+      '@apply text-primary hover:text-white': {},
+    },
+    /* Outline variant */
+    '&-primary.btn-outline': {
+      '@apply bg-transparent hover:bg-primary': {},
+      '@apply border-primary border': {},
       '@apply text-primary hover:text-white': {},
     },
   }
 }
 
-function buttonSolid(colors) {
+function buttonSecondary() {
   return {
-    '&-solid': {
-      '@apply shadow-sm': {},
-      '@apply border border-neutral-200': {},
-      '@apply text-neutral-900 bg-neutral-100': {},
-      /* hover */
-      '@apply hover:border-neutral-300 hover:bg-neutral-200': {},
-      /* focus */
-      '@apply focus:z-base': {},
-      '@apply focus:border-primary-500': {},
-      '@apply focus:ring-1 focus:ring-primary-500': {},
-      /* active */
-      '@apply active:bg-neutral-300': {},
-      /* dark mode */
-      '@apply dark:border-neutral-600': {},
-      '@apply dark:text-neutral-100 dark:bg-neutral-700': {},
-      /* dark hover */
-      '@apply dark:hover:border-neutral-300 dark:hover:bg-neutral-600': {},
-      /* dark focus */
-      '@apply dark:focus:border-primary-500': {},
-      /* dark active */
-      '@apply dark:active:bg-neutral-900 dark:active:border-neutral-600': {},
-
-      ...colors.reduce(
-        (styles, color) => ({
-          ...styles,
-          [`&[data-color="${color}"]`]: {
-            [`@apply border-${color}-600`]: {},
-            [`@apply text-white bg-${color}-500`]: {},
-            /* hover */
-            [`@apply hover:bg-${color}-600`]: {},
-            /* focus */
-            [`@apply focus:bg-${color}-700`]: {},
-            [`@apply focus:border-${color}-500`]: {},
-            [`@apply focus:ring-${color}-500`]: {},
-            /* active */
-            [`@apply active:bg-${color}-600`]: {},
-            /* dark mode */
-            [`@apply dark:border-${color}-500`]: {},
-            [`@apply dark:bg-${color}-600`]: {},
-            /* dark hover */
-            [`@apply dark:hover:bg-${color}-700`]: {},
-            /* dark focus */
-            [`@apply dark:focus:border-${color}-600`]: {},
-            [`@apply dark:focus:ring-${color}-600`]: {},
-            /* dark active */
-            [`@apply dark:active:bg-${color}-800 dark:active:border-${color}-600`]: {},
-          },
-        }),
-        {},
-      ),
+    '&-secondary': {
+      '@apply bg-neutral-500 hover:bg-neutral-700': {},
+      '@apply text-white': {},
+    },
+    /* light variant */
+    '&-secondary.btn-light': {
+      '@apply bg-neutral-200 hover:bg-neutral-500': {},
+      '@apply text-neutral-500 hover:text-white': {},
+    },
+    /* Outline variant */
+    '&-secondary.btn-outline': {
+      '@apply bg-transparent hover:bg-neutral-500': {},
+      '@apply border-neutral-500 border': {},
+      '@apply text-neutral-500 hover:text-white': {},
+    },
+  }
+}
+function buttonSuccess() {
+  return {
+    '&-success': {
+      '@apply bg-green-500 hover:bg-green-700': {},
+      '@apply text-white': {},
+    },
+    '&-success.btn-light': {
+      '@apply bg-green-200 hover:bg-green-500': {},
+      '@apply text-green-500 hover:text-white': {},
+    },
+    /* Outline variant */
+    '&-success.btn-outline': {
+      '@apply bg-transparent hover:bg-green-500': {},
+      '@apply border-green-500 border': {},
+      '@apply text-green-500 hover:text-white': {},
     },
   }
 }
 
-function buttonOutline(colors) {
+function buttonDanger() {
   return {
-    '&-outline': {
-      '@apply shadow-sm': {},
-      '@apply border border-neutral-200': {},
-      '@apply text-neutral-900 bg-transparent': {},
-      /* hover */
-      '@apply hover:bg-neutral-100 hover:border-neutral-300': {},
-      /* focus */
-      '@apply focus:z-base': {},
-      '@apply focus:border-primary-500': {},
-      '@apply focus:ring-1 focus:ring-primary-500': {},
-      /* active */
-      '@apply active:bg-neutral-200': {},
-      /* dark mode */
-      '@apply dark:border-neutral-600': {},
-      '@apply dark:text-neutral-100 dark:bg-transparent': {},
-      /* dark hover */
-      '@apply dark:hover:border-neutral-300 dark:hover:bg-neutral-700': {},
-      /* dark focus */
-      '@apply dark:focus:border-primary-500': {},
-      /* dark active */
-      '@apply dark:active:bg-neutral-600 dark:active:border-neutral-600': {},
-
-      ...colors.reduce(
-        (styles, color) => ({
-          ...styles,
-          [`&[data-color="${color}"]`]: {
-            [`@apply border-current`]: {},
-            [`@apply text-${color}-600 bg-transparent`]: {},
-            /* hover */
-            [`@apply hover:bg-${color}-50`]: {},
-            /* focus */
-            [`@apply focus:border-${color}-500`]: {},
-            [`@apply focus:ring-${color}-500`]: {},
-            /* active */
-            [`@apply active:bg-${color}-100`]: {},
-            /* dark mode */
-            [`@apply dark:border-${color}-200`]: {},
-            [`@apply dark:text-${color}-200 dark:bg-transparent`]: {},
-            [`@apply dark:border-${color}-300`]: {},
-            /* dark hover */
-            [`@apply dark:hover:bg-${color}-200`]: {},
-            [`@apply dark:hover:bg-opacity-15`]: {},
-            /* dark focus */
-            [`@apply dark:focus:border-${color}-500`]: {},
-            [`@apply dark:focus:ring-${color}-500`]: {},
-            /* dark active */
-            [`@apply dark:active:bg-${color}-200`]: {},
-            [`@apply dark:active:bg-opacity-25`]: {},
-          },
-        }),
-        {},
-      ),
+    '&-danger': {
+      '@apply bg-red-500 hover:bg-red-700': {},
+      '@apply text-white': {},
+    },
+    '&-danger.btn-light': {
+      '@apply bg-red-200 hover:bg-red-500': {},
+      '@apply text-red-500 hover:text-white': {},
+    },
+    /* Outline variant */
+    '&-danger.btn-outline': {
+      '@apply bg-transparent hover:bg-red-500': {},
+      '@apply border-red-500 border': {},
+      '@apply text-red-500 hover:text-white': {},
     },
   }
 }
 
-function buttonGhost(colors) {
+function buttonWarn() {
   return {
-    '&-ghost': {
-      '@apply text-neutral-900 bg-transparent': {},
-      '@apply hover:bg-neutral-100': {},
-      /* focus */
-      '@apply focus:z-base': {},
-      '@apply focus:ring-2 focus:ring-primary-500': {},
-      /* active */
-      '@apply active:bg-neutral-200': {},
-      /* dark mode */
-      '@apply dark:text-neutral-100 dark:bg-transparent': {},
-      /* dark hover */
-      '@apply dark:hover:border-neutral-300 dark:hover:bg-neutral-700': {},
-      /* dark active */
-      '@apply dark:active:bg-neutral-600 dark:active:border-neutral-400': {},
-
-      ...colors.reduce(
-        (styles, color) => ({
-          ...styles,
-          [`&[data-color="${color}"]`]: {
-            [`@apply text-${color}-600`]: {},
-            [`@apply hover:bg-${color}-50`]: {},
-            /* focus */
-            [`@apply focus:ring-${color}-500`]: {},
-            [`@apply active:bg-${color}-100`]: {},
-            // dark colors
-            [`@apply dark:text-${color}-200 dark:bg-transparent`]: {},
-            [`@apply dark:border-${color}-300 dark:hover:bg-${color}-200`]: {},
-            [`@apply dark:hover:bg-opacity-15`]: {},
-            [`@apply dark:active:bg-${color}-200`]: {},
-            [`@apply dark:active:bg-opacity-25`]: {},
-          },
-        }),
-        {},
-      ),
+    '&-warn': {
+      '@apply bg-yellow-500 hover:bg-yellow-700': {},
+      '@apply text-white': {},
+    },
+    '&-warn.btn-light': {
+      '@apply bg-yellow-200 hover:bg-yellow-500': {},
+      '@apply text-yellow-600 hover:text-white': {},
+    },
+    /* Outline variant */
+    '&-warn.btn-outline': {
+      '@apply bg-transparent hover:bg-yellow-500': {},
+      '@apply border-yellow-500 border': {},
+      '@apply text-yellow-500 hover:text-white': {},
     },
   }
 }
 
-function buttonLink(colors) {
+function buttonLink() {
   return {
     '&-link': {
-      '@apply h-auto p-0 leading-normal text-neutral-600 hover:underline active:text-neutral-700': {},
-      '@apply focus:z-base focus:ring-2 focus:ring-primary-500': {},
-      // dark colors
-      '@apply dark:text-neutral-200': {},
-      '@apply dark:active:text-neutral-500': {},
-
-      ...colors.reduce(
-        (styles, color) => ({
-          ...styles,
-          [`&[data-color="${color}"]`]: {
-            [`@apply text-${color}-600 active:text-${color}-700`]: {},
-            [`@apply focus:ring-${color}-500`]: {},
-            // dark colors
-            [`@apply dark:text-${color}-200`]: {},
-            [`@apply dark:active:text-${color}-500`]: {},
-          },
-        }),
-        {},
-      ),
+      '@apply bg-transparent hover:bg-neutral-200': {},
+      '@apply text-primary': {},
+    },
+    '&-link.btn-light': {
+      '@apply text-primary-200 hover:text-primary': {},
+    },
+    /* Outline variant */
+    '&-link.btn-outline': {
+      '@apply border-transparent hover:border-primary-500 border': {},
     },
   }
 }
@@ -194,51 +113,24 @@ function buttonLink(colors) {
 function buttonSize() {
   return {
     '&-xs': {
-      paddingRight: 'var(--vc-density-button-xs-px)',
-      paddingLeft: 'var(--vc-density-button-xs-px)',
-      fontSize: 'var(--vc-density-button-xs-fontSize)',
-      lineHeight: 'var(--vc-density-button-xs-lineHeight)',
-      height: 'var(--vc-density-button-xs-height)',
-      minWidth: 'var(--vc-density-button-xs-minWidth)',
+      '@apply px-2 py-0.5': {},
+      '@apply text-xs': {},
     },
-
     '&-sm': {
-      paddingRight: 'var(--vc-density-button-sm-px)',
-      paddingLeft: 'var(--vc-density-button-sm-px)',
-      fontSize: 'var(--vc-density-button-sm-fontSize)',
-      lineHeight: 'var(--vc-density-button-sm-lineHeight)',
-      height: 'var(--vc-density-button-sm-height)',
-      minWidth: 'var(--vc-density-button-sm-minWidth)',
+      '@apply px-2.5 py-1': {},
+      '@apply text-sm': {},
     },
-
     '&-md': {
-      paddingRight: 'var(--vc-density-button-md-px)',
-      paddingLeft: 'var(--vc-density-button-md-px)',
-      px: 'var(--vc-density-button-md-px)',
-      fontSize: 'var(--vc-density-button-md-fontSize)',
-      lineHeight: 'var(--vc-density-button-md-lineHeight)',
-      height: 'var(--vc-density-button-md-height)',
-      minWidth: 'var(--vc-density-button-md-minWidth)',
+      '@apply px-3.5 py-1.5': {},
+      '@apply text-base': {},
     },
-
     '&-lg': {
-      paddingRight: 'var(--vc-density-button-lg-px)',
-      paddingLeft: 'var(--vc-density-button-lg-px)',
-      px: 'var(--vc-density-button-lg-px)',
-      fontSize: 'var(--vc-density-button-lg-fontSize)',
-      lineHeight: 'var(--vc-density-button-lg-lineHeight)',
-      height: 'var(--vc-density-button-lg-height)',
-      minWidth: 'var(--vc-density-button-lg-minWidth)',
+      '@apply px-5 py-2': {},
+      '@apply text-lg': {},
     },
-
     '&-xl': {
-      paddingRight: 'var(--vc-density-button-xl-px)',
-      paddingLeft: 'var(--vc-density-button-xl-px)',
-      px: 'var(--vc-density-button-xl-px)',
-      fontSize: 'var(--vc-density-button-xl-fontSize)',
-      lineHeight: 'var(--vc-density-button-xl-lineHeight)',
-      height: 'var(--vc-density-button-xl-height)',
-      minWidth: 'var(--vc-density-button-xl-minWidth)',
+      '@apply px-6 py-2.5': {},
+      '@apply text-xl': {},
     },
   }
 }
@@ -246,7 +138,7 @@ function buttonSize() {
 module.exports = Button = (colors) => ({
   '.btn': {
     '@apply relative': {},
-    // '@apply m-0': {},
+    '@apply rounded-md': {},
     '@apply inline-flex items-center justify-center flex-shrink-0 align-middle': {},
     '@apply font-medium leading-tight': {},
     transitionProperty: 'background-color, border-color, color, fill, stroke, box-shadow',
@@ -257,14 +149,15 @@ module.exports = Button = (colors) => ({
     ...buttonSize(),
 
     '&-disabled': {
-      '@apply disabled:shadow-none disabled:cursor-not-allowed disabled:opacity-60': {},
+      '@apply shadow-none cursor-not-allowed opacity-60': {},
     },
 
     // variants
     ...buttonPrimary(),
-    ...buttonSolid(colors),
-    ...buttonOutline(colors),
-    ...buttonGhost(colors),
-    ...buttonLink(colors),
+    ...buttonSecondary(),
+    ...buttonSuccess(),
+    ...buttonDanger(),
+    ...buttonWarn(),
+    ...buttonLink(),
   },
 })

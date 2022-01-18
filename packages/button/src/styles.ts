@@ -4,13 +4,15 @@ import { cx } from '@hpui/utils'
 export const useButtonClass = createMemoClass((props) => {
   const colors = {
     primary: 'btn-primary',
+    secondary: 'btn-secondary',
+    success: 'btn-success',
+    danger: 'btn-danger',
+    warn: 'btn-warn',
+    link: 'btn-link',
   }
   const variantClasses = {
-    // outline: 'btn-outline',
-    solid: 'btn-solid',
-    // ghost: 'btn-ghost',
+    outline: 'btn-outline',
     light: 'btn-light',
-    // link: 'btn-link',
   }
 
   const sizes = {
@@ -23,7 +25,7 @@ export const useButtonClass = createMemoClass((props) => {
 
   const classes = cx(
     'btn',
-    colors[props.colorType],
+    colors[props.color],
     sizes[props.size],
     variantClasses[props.variant],
     props.disabled && 'btn-disabled',

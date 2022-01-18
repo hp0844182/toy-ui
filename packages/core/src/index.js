@@ -23,28 +23,30 @@ const Notification = require('./components/notification')
 const Radio = require('./components/radio')
 const Switch = require('./components/switch')
 const Tag = require('./components/tag')
+const Spinner = require('./components/spinner')
 
 const components = [
-  Alert,
-  Avatar,
-  Badge,
-  Breadcrumb,
-  ButtonGroup,
+  // Alert,
+  // Avatar,
+  // Badge,
+  // Breadcrumb,
+  // ButtonGroup,
   Button,
-  Checkbox,
-  Code,
-  Divider,
-  Dot,
-  Forms,
-  IconButton,
-  Icon,
-  Kbd,
-  Link,
-  Message,
-  Notification,
-  Radio,
-  Switch,
-  Tag,
+  Spinner,
+  // Checkbox,
+  // Code,
+  // Divider,
+  // Dot,
+  // Forms,
+  // IconButton,
+  // Icon,
+  // Kbd,
+  // Link,
+  // Message,
+  // Notification,
+  // Radio,
+  // Switch,
+  // Tag,
 ]
 
 const defaultColors = ['primary']
@@ -53,9 +55,9 @@ module.exports = plugin.withOptions(
   function (options = { colors: [], cssBase: true }) {
     return function ({ addComponents, addVariant, addBase, variants, e, theme, addUtilities }) {
       const optionColors = [...defaultColors, ...(options.colors || [])]
-      active({ addVariant, variants, e, theme, addUtilities })
-      selected({ addVariant, variants, e, theme, addUtilities })
-      disabled({ addVariant, variants, e, theme, addUtilities })
+      // active({ addVariant, variants, e, theme, addUtilities })
+      // selected({ addVariant, variants, e, theme, addUtilities })
+      // disabled({ addVariant, variants, e, theme, addUtilities })
 
       addComponents(
         components.map((component) => component(optionColors)),

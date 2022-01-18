@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         primary: { ...colors.blue, DEFAULT: colors.blue[500] },
+        neutral: colors.neutral,
       },
     },
   },
@@ -14,7 +15,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    require('@tailwindcss/forms'),
+    // require('@tailwindcss/forms'),
     require('./packages/core')({
       colors: ['blue'],
       cssBase: true,

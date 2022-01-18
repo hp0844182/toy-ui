@@ -12,3 +12,6 @@ export function isObject(value: any): value is Dict {
 }
 
 export const __DEV__ = process.env.NODE_ENV !== 'production'
+
+// has children
+export const isNestedPattern = (children: any) => !!(children && typeof children !== 'undefined')
