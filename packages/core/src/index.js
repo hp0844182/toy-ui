@@ -24,15 +24,18 @@ const Radio = require('./components/radio')
 const Switch = require('./components/switch')
 const Tag = require('./components/tag')
 const Spinner = require('./components/spinner')
-
+const Backdrop = require('./components/backdrop')
+const Modal = require('./components/modal')
 const components = [
   // Alert,
   // Avatar,
   // Badge,
   // Breadcrumb,
   // ButtonGroup,
+  Backdrop,
   Button,
   Spinner,
+  Modal,
   // Checkbox,
   // Code,
   // Divider,

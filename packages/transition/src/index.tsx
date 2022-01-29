@@ -34,7 +34,7 @@ interface TransitionProps {
   appear?: boolean
 }
 
-const CSSTransition: React.FC<TransitionProps> = function CSSTransition({
+export const CSSTransition: React.FC<TransitionProps> = function CSSTransition({
   show,
   enter = '',
   enterFrom = '',
@@ -44,6 +44,7 @@ const CSSTransition: React.FC<TransitionProps> = function CSSTransition({
   leaveTo = '',
   appear,
   children,
+  ...rest
 }) {
   const enterClasses = enter.split(' ').filter((s) => s.length)
   const enterFromClasses = enterFrom.split(' ').filter((s) => s.length)
@@ -64,6 +65,7 @@ const CSSTransition: React.FC<TransitionProps> = function CSSTransition({
       appear={appear}
       unmountOnExit
       in={show}
+      timeout={700}
       addEndListener={(node: HTMLElement, done) => {
         node.addEventListener('transitionend', done, false)
       }}
@@ -78,22 +80,25 @@ const CSSTransition: React.FC<TransitionProps> = function CSSTransition({
         removeClasses(node, [...enterToClasses, ...enterClasses])
       }}
       onExit={(node: HTMLElement) => {
+        console.log('onExit')
         addClasses(node, [...leaveClasses, ...leaveFromClasses])
       }}
       onExiting={(node: HTMLElement) => {
+        console.log('onExiting')
         removeClasses(node, leaveFromClasses)
         addClasses(node, leaveToClasses)
       }}
       onExited={(node: HTMLElement) => {
         removeClasses(node, [...leaveToClasses, ...leaveClasses])
       }}
+      {...rest}
     >
       {children}
     </ReactCSSTransition>
   )
 }
 
-const Transition: React.FC<TransitionProps> = function Transition({ show, appear, ...rest }) {
+export const Transition: React.FC<TransitionProps> = function Transition({ show, appear, ...rest }) {
   const { parent } = useContext(transitionContext)
   const isInitialRender = useIsInitialRender()
   const isChild = show === undefined
@@ -115,5 +120,3 @@ const Transition: React.FC<TransitionProps> = function Transition({ show, appear
       </transitionContext.Provider>
     )
 }
-
-export default Transition

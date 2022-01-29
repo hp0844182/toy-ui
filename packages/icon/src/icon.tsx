@@ -1,38 +1,32 @@
 import { DefaultProps } from '@hpui/theme'
-import { cx, __DEV__ } from '@hpui/utils'
-import VisuallyHidden from '@vechaiui/visually-hidden'
+import { __DEV__, cx } from '@hpui/utils'
+
 import * as React from 'react'
-import { QuestionCircleIcon } from './core'
 export interface IconProps extends DefaultProps {
-  as?: React.ElementType
   inline?: boolean
   role?: string
   color?: string
-  /**
-   * The accessible label for the icon. This label will be visually hidden but announced to screen
-   * reader users, similar to `alt` text for `img` tags.
-   */
-  label: string
 }
-
-export const Icon = React.forwardRef<any, IconProps>((props, ref) => {
-  const { as: Comp = QuestionCircleIcon, inline = true, className, role = 'presentation', label, ...rest } = props
-
-  return (
-    <>
-      <Comp
+export const Icon = React.forwardRef<SVGSVGElement, IconProps>(
+  ({ color = 'currentColor', className, inline, children, ...rest }, ref) => {
+    const cls = cx(inline ? 'inline-block' : 'block', className)
+    return (
+      <svg
         ref={ref}
-        className={cx(inline ? 'icon-inline' : 'icon-block', className)}
-        role={role}
-        aria-hidden={true}
-        focusable={false}
+        xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke={color}
+        className={cls}
         {...rest}
-      />
-      <VisuallyHidden>{label}</VisuallyHidden>
-    </>
-  )
-})
-
+      >
+        {children}
+      </svg>
+    )
+  },
+)
 if (__DEV__) {
   Icon.displayName = 'Icon'
 }

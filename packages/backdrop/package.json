@@ -1,5 +1,5 @@
 {
-  "name": "@hpui/button",
+  "name": "@hpui/backdrop",
   "version": "0.0.1",
   "description": "",
   "main": "dist/cjs/index.js",
@@ -36,8 +36,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hpui/icon": "^0.0.1",
-    "@hpui/spinner": "^0.2.1",
     "@hpui/theme": "^0.4.0",
     "@hpui/utils": "^0.0.1"
   }

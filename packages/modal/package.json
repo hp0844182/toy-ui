@@ -1,6 +1,6 @@
 {
-  "name": "@hpui/alert",
-  "version": "0.2.1",
+  "name": "@hpui/modal",
+  "version": "0.0.1",
   "sideEffects": false,
   "license": "MIT",
   "main": "dist/cjs/index.js",
@@ -33,17 +33,13 @@
     "lint:src": "eslint src --ext .ts,.tsx --config ../../.eslintrc",
     "lint:types": "tsc --noEmit"
   },
-  "devDependencies": {
-    "react": "^17.0.2"
-  },
+  "keywords": [],
+  "author": "",
   "dependencies": {
+    "@hpui/backdrop": "^0.0.1",
+    "@hpui/button": "^0.0.1",
     "@hpui/icon": "^0.0.1",
-    "@hpui/theme": "^0.4.0",
-    "@hpui/utils": "^0.0.1",
-    "@vechaiui/theme": "0.4.0",
-    "@vechaiui/utils": "^0.1.0"
-  },
-  "peerDependencies": {
-    "react": ">=16.8.6"
+    "@hpui/transition": "^0.0.1",
+    "@hpui/utils": "^0.0.1"
   }
 }

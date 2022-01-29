@@ -2,12 +2,14 @@ function buttonPrimary() {
   return {
     '&-primary': {
       '@apply bg-primary hover:bg-primary-700': {},
+      '@apply ring-primary-200': {},
       '@apply text-white': {},
     },
     /* light variant */
     '&-primary.btn-light': {
-      '@apply bg-primary-200 hover:bg-primary': {},
-      '@apply text-primary hover:text-white': {},
+      '@apply bg-primary-100 hover:bg-primary-200': {},
+      '@apply ring-primary-100': {},
+      '@apply text-primary-900': {},
     },
     /* Outline variant */
     '&-primary.btn-outline': {
@@ -22,12 +24,14 @@ function buttonSecondary() {
   return {
     '&-secondary': {
       '@apply bg-neutral-500 hover:bg-neutral-700': {},
+      '@apply ring-neutral-200': {},
       '@apply text-white': {},
     },
     /* light variant */
     '&-secondary.btn-light': {
-      '@apply bg-neutral-200 hover:bg-neutral-500': {},
-      '@apply text-neutral-500 hover:text-white': {},
+      '@apply bg-neutral-100 hover:bg-neutral-200': {},
+      '@apply ring-neutral-100': {},
+      '@apply text-neutral-900': {},
     },
     /* Outline variant */
     '&-secondary.btn-outline': {
@@ -41,11 +45,13 @@ function buttonSuccess() {
   return {
     '&-success': {
       '@apply bg-green-500 hover:bg-green-700': {},
+      '@apply ring-green-200': {},
       '@apply text-white': {},
     },
     '&-success.btn-light': {
-      '@apply bg-green-200 hover:bg-green-500': {},
-      '@apply text-green-500 hover:text-white': {},
+      '@apply bg-green-100 hover:bg-green-200': {},
+      '@apply ring-green-100': {},
+      '@apply text-green-900': {},
     },
     /* Outline variant */
     '&-success.btn-outline': {
@@ -60,11 +66,13 @@ function buttonDanger() {
   return {
     '&-danger': {
       '@apply bg-red-500 hover:bg-red-700': {},
+      '@apply ring-red-200': {},
       '@apply text-white': {},
     },
     '&-danger.btn-light': {
-      '@apply bg-red-200 hover:bg-red-500': {},
-      '@apply text-red-500 hover:text-white': {},
+      '@apply bg-red-100 hover:bg-red-200': {},
+      '@apply ring-red-100': {},
+      '@apply text-red-900': {},
     },
     /* Outline variant */
     '&-danger.btn-outline': {
@@ -79,11 +87,13 @@ function buttonWarn() {
   return {
     '&-warn': {
       '@apply bg-yellow-500 hover:bg-yellow-700': {},
+      '@apply ring-yellow-200': {},
       '@apply text-white': {},
     },
     '&-warn.btn-light': {
-      '@apply bg-yellow-200 hover:bg-yellow-500': {},
-      '@apply text-yellow-600 hover:text-white': {},
+      '@apply bg-yellow-100 hover:bg-yellow-200': {},
+      '@apply ring-yellow-100': {},
+      '@apply text-yellow-900': {},
     },
     /* Outline variant */
     '&-warn.btn-outline': {
@@ -145,6 +155,7 @@ module.exports = Button = (colors) => ({
     '@apply	duration-75 ease-out': {},
     '@apply outline-none appearance-none cursor-pointer select-none whitespace-nowrap': {},
     '@apply focus:outline-none': {},
+    '@apply focus:ring-2': {},
     // sizing
     ...buttonSize(),
 

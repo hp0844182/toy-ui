@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 /* @heroicons/react/outline */
 import * as React from 'react'
-import { IconProps } from './icon'
+import { IconProps, Icon } from './icon'
 
 export const QuestionCircleIcon = React.forwardRef<SVGSVGElement, IconProps>(
   ({ color = 'currentColor', ...rest }, ref) => {
@@ -97,3 +97,9 @@ export const ChevronUpIcon = React.forwardRef<SVGSVGElement, IconProps>(({ color
     </svg>
   )
 })
+
+export const CloseIcon = React.forwardRef<SVGSVGElement, IconProps>((props) => (
+  <Icon {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+  </Icon>
+))

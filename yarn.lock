@@ -1074,17 +1074,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.13.10":
+"@babel/runtime@^7.13.10", "@babel/runtime@^7.8.7":
   version "7.16.7"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
   integrity sha512-9E9FJowqAsytyOY6LG+1KuueckRL+aQW+mKvXRXnuFGyRAyepJPmEo9vgMfXUA6O9u3IeEdv9MAkppFcaQwogQ==
-  dependencies:
-    regenerator-runtime "^0.13.4"
-
-"@babel/runtime@^7.8.7":
-  version "7.15.4"
-  resolved "https://registry.nlark.com/@babel/runtime/download/@babel/runtime-7.15.4.tgz?cache=0&sync_timestamp=1630618785994&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.15.4.tgz#fd17d16bfdf878e6dd02d19753a39fa8a8d9c84a"
-  integrity sha1-/RfRa/34eObdAtGXU6OfqKjZyEo=
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -3244,7 +3237,7 @@
 
 "@types/react-transition-group@4.4.0":
   version "4.4.0"
-  resolved "https://registry.nlark.com/@types/react-transition-group/download/@types/react-transition-group-4.4.0.tgz?cache=0&sync_timestamp=1629709179469&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Freact-transition-group%2Fdownload%2F%40types%2Freact-transition-group-4.4.0.tgz#882839db465df1320e4753e6e9f70ca7e9b4d46d"
+  resolved "https://registry.npmmirror.com/@types/react-transition-group/download/@types/react-transition-group-4.4.0.tgz?cache=0&sync_timestamp=1637270349219&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Freact-transition-group%2Fdownload%2F%40types%2Freact-transition-group-4.4.0.tgz#882839db465df1320e4753e6e9f70ca7e9b4d46d"
   integrity sha1-iCg520Zd8TIOR1Pm6fcMp+m01G0=
   dependencies:
     "@types/react" "*"
@@ -3410,15 +3403,6 @@
   dependencies:
     "@typescript-eslint/types" "4.29.3"
     eslint-visitor-keys "^2.0.0"
-
-"@vechaiui/theme@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.npmmirror.com/@vechaiui/theme/download/@vechaiui/theme-0.4.0.tgz#f9be258827047c0eaffd5ae3445eec72108e0bdb"
-  integrity sha512-ewC0LrNuJLcPjcF46LhCPNwHHdQMHUomgaRcOAneZsPsXFnfMRNXOsHSjpN8F4c3oP7KcTUP571V/T/UnctSQA==
-  dependencies:
-    "@emotion/react" "^11.5.0"
-    "@vechaiui/utils" "^0.1.0"
-    lodash.set "^4.3.2"
 
 "@vechaiui/utils@0.2.1":
   version "0.2.1"

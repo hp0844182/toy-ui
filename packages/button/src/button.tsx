@@ -1,6 +1,8 @@
 // import { Spinner } from '@vechaiui/spinner'
 import { DefaultProps } from '@hpui/theme'
 import { cx, __DEV__ } from '@hpui/utils'
+import { Spin } from '@hpui/spinner'
+
 import * as React from 'react'
 
 import { useButtonClass } from './styles'
@@ -66,10 +68,8 @@ export const Button = React.forwardRef<HTMLButtonElement, IButtonProps>((props, 
       {...rest}
     >
       {leftIcon && !loading ? leftIcon : null}
-      {/* {loading && (
-        <Spinner className={cx(loadingText ? 'relative' : 'absolute', loadingText ? `mr-2` : 'mr-0')} size="sm" />
-      )} */}
-      {loading ? loadingText || <span className="opacity-0">{children}</span> : children}
+      {loading && <Spin className="mr-2" size="sm" />}
+      {(loading && loadingText) || children}
       {rightIcon && !loading ? rightIcon : null}
     </button>
   )

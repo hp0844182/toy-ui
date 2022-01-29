@@ -1,5 +1,5 @@
 import { Button } from '../src'
-// import { Announcement } from './announcement'
+import { Announcement } from './announcement'
 
 export default {
   title: 'Button',
@@ -106,6 +106,63 @@ export const disabled = () => {
       </Button>
       <Button color="warn" disabled>
         warn
+      </Button>
+    </div>
+  )
+}
+
+export const loading = () => {
+  return (
+    <div>
+      <div className="flex space-x-2 items-center">
+        <Button color="primary" loading>
+          primary
+        </Button>
+        <Button color="danger" loading>
+          danger
+        </Button>
+        <Button color="link" loading>
+          link
+        </Button>
+        <Button color="secondary" loading>
+          secondary
+        </Button>
+        <Button color="success" loading>
+          success
+        </Button>
+        <Button color="warn" loading>
+          warn
+        </Button>
+      </div>
+      <div className="flex space-x-2 items-center mt-4">
+        <Button color="primary" loading size="xs">
+          xssize
+        </Button>
+        <Button color="link" loading size="sm">
+          link
+        </Button>
+        <Button color="secondary" loading size="md">
+          secondary
+        </Button>
+        <Button color="success" loading size="lg">
+          success
+        </Button>
+        <Button color="danger" loading size="xl">
+          danger
+        </Button>
+      </div>
+    </div>
+  )
+}
+
+export const icon = () => {
+  return (
+    <div className="flex space-x-2 items-center">
+      <Button color="primary" leftIcon={<Announcement />}>
+        primary
+      </Button>
+      <Button color="danger" rightIcon={<Announcement />}>
+        danger
       </Button>
     </div>
   )

@@ -12,11 +12,18 @@ export interface ISpinProps extends DefaultProps {
 
 export interface SpinProps extends React.HTMLAttributes<SVGSVGElement>, ISpinProps {}
 
-const Spin = (props: ISpinProps) => {
-  const { size = 'sm' } = props
+export const Spin = (props: ISpinProps) => {
+  const { size = 'sm', className } = props
   const classes = useSpinClass({ size })
+  console.log(className)
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" stroke="currentColor" fill="none" viewBox="0 0 66 66" className={classes}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="currentColor"
+      fill="none"
+      viewBox="0 0 66 66"
+      className={cx(classes, className)}
+    >
       <circle cx="33" cy="33" fill="none" r="28" stroke="currentColor" strokeWidth="10" className="opacity-30" />
       <circle
         cx="33"
