@@ -1,7 +1,8 @@
 {
   "tailwindCSS.experimental.classRegex": [
     ":\\s*?[\"'`]([^\"'`]*).*?,",
-    "@apply\\s*?([^\"'`]*).*?,"
+    "@apply\\s*?([^\"'`]*).*?,",
+    "cx\\(([^)]*)\\)",
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
 }

@@ -70,7 +70,16 @@ export const XIcon = React.forwardRef<SVGSVGElement, IconProps>(({ color = 'curr
 export const ExclamationIcon = React.forwardRef<SVGSVGElement, IconProps>(
   ({ color = 'currentColor', ...rest }, ref) => {
     return (
-      <svg ref={ref} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke={color} {...rest}>
+      <svg
+        ref={ref}
+        width="1em"
+        height="1em"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke={color}
+        {...rest}
+      >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -98,8 +107,31 @@ export const ChevronUpIcon = React.forwardRef<SVGSVGElement, IconProps>(({ color
   )
 })
 
-export const CloseIcon = React.forwardRef<SVGSVGElement, IconProps>((props) => (
-  <Icon {...props}>
+export const CloseIcon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
   </Icon>
 ))
+
+export const ChevronRightIcon = React.forwardRef<SVGSVGElement, IconProps>(
+  ({ color = 'currentColor', ...rest }, ref) => {
+    return (
+      <svg
+        ref={ref}
+        width="1em"
+        height="1em"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        stroke={color}
+        xmlns="http://www.w3.org/2000/svg"
+        {...rest}
+      >
+        <path
+          fillRule="evenodd"
+          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+          clipRule="evenodd"
+        ></path>
+      </svg>
+    )
+  },
+)

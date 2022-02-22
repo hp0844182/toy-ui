@@ -36,7 +36,10 @@
   "keywords": [],
   "author": "",
   "dependencies": {
-  },
-  "devDependencies": {
+    "@hpui/icon": "^0.0.1",
+    "@hpui/theme": "^0.4.0",
+    "@hpui/utils": "^0.0.1",
+    "@types/lodash-es": "^4.17.6",
+    "lodash-es": "^4.17.21"
   }
 }
